@@ -1,0 +1,12 @@
+.container {
+  width: 100%;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+@for $i from 1 through $columns {
+  .col-lg-#{$i} {
+    width: percentage($i/$columns);
+  }
+}
