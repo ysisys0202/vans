@@ -1,0 +1,17 @@
+{
+	"version": 3,
+	"file": "index.css",
+	"sources": [
+		"../scss/index.scss",
+		"../scss/constants/_colors.scss",
+		"../scss/constants/_typography.scss",
+		"../scss/constants/_break-points.scss",
+		"../scss/constants/_grids.scss",
+		"../scss/mixins/_flexbox.scss",
+		"../scss/mixins/_positions.scss",
+		"../scss/mixins/_responsive.scss",
+		"../scss/layouts/_main.scss"
+	],
+	"names": [],
+	"mappings": "AQAA,AACE,KADG,CACH,WAAW,CAAC;EACV,UAAU,EAAE,KAAK;EACjB,YAAY,EAAE,UAAU,GACzB;;AAJH,AAMI,KANC,CAKH,YAAY,CACV,WAAW,CAAC;EACV,aAAa,EAAE,KAAK;EACpB,KAAK,EAAE,OAAO,GAKf;EAbL,AASM,KATD,CAKH,YAAY,CAIP,iBAAM,CAAC;IACN,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,IAAI,GACb;;AAZP,AAeM,KAfD,CAKH,YAAY,CAUP,WAAK,CAAC;EACL,WAAW,ENfF,SAAS,EAAE,UAAU;EMgB9B,SAAS,ENLF,IAAI;EMMX,WAAW,EAAE,GAAG;EAChB,WAAW,EAAE,CAAC;EACd,mBAAmB,EAAE,GAAG,CPfX,OAAO;EOgBpB,uBAAuB,EAAE,WAAW,GAOrC;EA5BP,AAsBQ,KAtBH,CAKH,YAAY,CAUP,WAAK,AAOH,MAAM,CAAC;IACN,uBAAuB,EPlBZ,OAAO,GOmBnB;EAxBT,AAyBQ,KAzBH,CAKH,YAAY,CAUP,WAAK,AAUH,IAAK,CAAA,WAAW,EAAE;IACjB,aAAa,EAAE,IAAI,GACpB"
+}

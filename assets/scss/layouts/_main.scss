@@ -1,0 +1,32 @@
+.main {
+  .fixed-area {
+    margin-top: 120px;
+    padding-left: 13.54167vw;
+  }
+  .scroll-area {
+    .main-slide {
+      margin-bottom: 100px;
+      width: 43.75vw;
+      &-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .style {
+      &-item {
+        font-family: $font-family-en;
+        font-size: $font-size-96;
+        font-weight: 800;
+        line-height: 1;
+        -webkit-text-stroke: 1px $color-grey-primary;
+        -webkit-text-fill-color: transparent;
+        &:hover {
+          -webkit-text-fill-color: $color-grey-primary;
+        }
+        &:not(:last-child) {
+          margin-bottom: 60px;
+        }
+      }
+    }
+  }
+}
