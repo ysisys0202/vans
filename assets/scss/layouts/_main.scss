@@ -18,10 +18,13 @@
         font-size: $font-size-96;
         font-weight: 800;
         line-height: 1;
-        -webkit-text-stroke: 1px $color-grey-primary;
-        -webkit-text-fill-color: transparent;
+        text-shadow: -1px -1px 0 $color-grey-primary,
+          1px -1px 0 $color-grey-primary, -1px 1px 0 $color-grey-primary,
+          1px 1px 0 $color-grey-primary;
+        color: $color-white;
+        transition: color 200ms ease-in-out;
         &:hover {
-          -webkit-text-fill-color: $color-grey-primary;
+          color: $color-grey-primary;
         }
         &:not(:last-child) {
           margin-bottom: 60px;
