@@ -1,0 +1,75 @@
+.global-header {
+  @include flexbox(start);
+  padding: 0 8.3333%;
+  height: 60px;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-grey-border;
+  .logo {
+    margin-left: 10px;
+    height: 35px;
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+  .global-nav {
+    &-list {
+      @include flexbox(start);
+    }
+    &-item {
+      margin-left: 20px;
+      font-size: $font-size-16;
+      font-weight: 500;
+      opacity: 1;
+      transition: opacity 100ms ease-in-out;
+      &:hover {
+        opacity: 0.6;
+      }
+      strong {
+        color: $color-red;
+      }
+    }
+  }
+  .util-menu {
+    @include flexbox(end);
+    margin-left: auto;
+    &-list {
+      @include flexbox(start);
+    }
+    &-item {
+      position: relative;
+      transition: opacity 100ms ease-in-out;
+      margin-right: 20px;
+
+      &:hover {
+        opacity: 0.6;
+      }
+      .badge {
+        @include flexbox;
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $color-blue-secondary;
+        font-size: 8px;
+        color: $color-white;
+      }
+    }
+    .sidebar-btn {
+      @include flexbox(between);
+      padding: 0 20px;
+      width: 250px;
+      height: 60px;
+      background-color: $color-blue-primary;
+      font-size: $font-size-16;
+      font-weight: 500;
+      color: $color-white;
+      transition: width 200ms ease-in-out;
+      &.is-active {
+        width: 60px;
+      }
+    }
+  }
+}
