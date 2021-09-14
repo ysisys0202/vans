@@ -10,3 +10,9 @@
   font-style: normal;
   font-display: block;
 }
+html {
+  font-size: $font-size-18;
+  font-weight: 400;
+  line-height: 1.6667;
+  color: $color-grey-primary;
+}
