@@ -443,4 +443,63 @@
 .news .content-body {
   display: flex; }
 
+/*200px / 1920px *100*/
+.explore-wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background-color: #fff;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000; }
+
+.explore-left, .explore-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50%; }
+
+.explore-item {
+  /*30px /1920px *100*/
+  padding-top: 1.5625vw;
+  padding-left: 10px;
+  width: 33.3333%; }
+  .explore-item > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%; }
+  .explore-item:hover .explore-title {
+    opacity: 0.8;
+    text-decoration: underline; }
+
+.explore-left .explore-item {
+  height: 10.4167vw;
+  border-right: 1px solid #000; }
+
+.explore-left .explore-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1; }
+  .explore-left .explore-title i {
+    display: inline-block;
+    margin-right: 3px; }
+
+.explore-right .explore-item {
+  height: 5.20835vw; }
+  .explore-right .explore-item:nth-of-type(3) ~ .explore-item {
+    border-top: 1px solid #000; }
+  .explore-right .explore-item:not(:nth-of-type(3n)) {
+    border-right: 1px solid #000; }
+
+.explore-right .explore-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  line-height: 1; }
+  .explore-right .explore-title i {
+    display: inline-block;
+    margin-right: 3px; }
+
 /*# sourceMappingURL=index.css.map */
