@@ -1,6 +1,22 @@
 .content {
   padding: 160px 0;
   &-header {
+    /*170px/1920px*100*/
+    margin-left: 8.85416%;
     margin-bottom: 80px;
+    .link-text {
+      display: inline-block;
+      margin-top: 20px;
+      i {
+        display: inline-block;
+        margin-left: 4px;
+        transition: transform 100ms ease-in-out;
+      }
+      &:hover {
+        i {
+          transform: translateX(8px);
+        }
+      }
+    }
   }
 }
