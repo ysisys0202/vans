@@ -28,10 +28,24 @@
     transition: transform 400ms ease-in-out; }
   .product-card .info-area {
     margin-top: 20px; }
+  .product-card .tag-group {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #e74c3c; }
   .product-card .tag {
     color: #e74c3c;
     font-size: 14px;
     line-height: 1; }
+    .product-card .tag:not(:last-of-type)::after {
+      content: "";
+      display: inline-block;
+      margin: 0 3px 0 6px;
+      width: 4px;
+      height: 4px;
+      background-color: #e74c3c;
+      border-radius: 50%;
+      vertical-align: middle; }
   .product-card .product-title {
     margin-top: 10px;
     width: 100%;

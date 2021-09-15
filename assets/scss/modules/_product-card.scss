@@ -36,10 +36,27 @@
   .info-area {
     margin-top: 20px;
   }
+  .tag-group {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $color-red;
+  }
   .tag {
     color: $color-red;
     font-size: $font-size-14;
     line-height: 1;
+
+    &:not(:last-of-type)::after {
+      content: "";
+      display: inline-block;
+      margin: 0 3px 0 6px;
+      width: 4px;
+      height: 4px;
+      background-color: $color-red;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
   }
   .product-title {
     margin-top: 10px;
