@@ -1,0 +1,45 @@
+.product-slide {
+  width: 100%;
+  .slide-util {
+    margin-top: 68px;
+    position: relative;
+  }
+  .slide-controls {
+    @include flexbox;
+    &-btn {
+      margin: 0 120px;
+      margin-top: 4px;
+      font-size: 32px;
+      color: $color-grey-primary;
+      i {
+        display: inline-block;
+      }
+      &.is-prev {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .slide-nav {
+    @include pos-center;
+    bottom: 0;
+    &-list {
+      @include flexbox;
+    }
+    &-item {
+      margin: 0 20px;
+      &.tns-nav-active {
+        .slide-nav-btn {
+          background-color: $color-blue-secondary;
+        }
+      }
+    }
+    &-btn {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $color-grey-secondary;
+    }
+  }
+}
