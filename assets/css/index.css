@@ -125,4 +125,92 @@
       border-radius: 50%;
       background-color: #727272; }
 
+.whats-your-style .film-wrapper {
+  position: relative;
+  /*480px/1920px*100*/
+  padding-bottom: 25%;
+  /*1430px / 1920px * 100*/
+  width: 74.4791%;
+  height: 0; }
+
+.whats-your-style .film {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*pt:74px, pb: 70px,/ 1430px*/
+  padding: 5.17482% 0 4.8951% 0;
+  width: 100%;
+  height: 100%; }
+
+.whats-your-style .film-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: auto;
+  pointer-events: none; }
+
+.whats-your-style .film-item {
+  position: relative;
+  /*265px/1430px*100*/
+  width: 18.04195%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer; }
+  .whats-your-style .film-item:nth-of-type(1) {
+    /*15px/1420px*100*/
+    margin-left: 1.05633%;
+    background-image: url(../images/index/vans_style_1.jpg); }
+  .whats-your-style .film-item:nth-of-type(2) {
+    /*30px/1420px*100*/
+    margin-left: 2.11267%;
+    background-image: url(../images/index/vans_style_2.jpg); }
+  .whats-your-style .film-item:nth-of-type(3) {
+    /*22px/1420px*100*/
+    margin-left: 1.54929%;
+    background-image: url(../images/index/vans_style_3.jpg); }
+  .whats-your-style .film-item:nth-of-type(4) {
+    /*22px/1420px*100*/
+    margin-left: 1.54929%;
+    background-image: url(../images/index/vans_style_4.jpg); }
+  .whats-your-style .film-item:nth-of-type(5) {
+    /*22px/1420px*100*/
+    margin-left: 1.54929%;
+    background-image: url(../images/index/vans_style_5.jpg); }
+  .whats-your-style .film-item .info-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    visibility: hidden;
+    transition: visibility 100ms ease-in-out; }
+  .whats-your-style .film-item:hover .info-area {
+    visibility: visible; }
+  .whats-your-style .film-item .film-title {
+    font-family: "Dhurjati", sans-serif;
+    font-size: 28px;
+    color: #ff793f;
+    text-transform: uppercase; }
+
+.whats-your-style .content-desc {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: 8.3333%;
+  width: 45.5%;
+  font-size: 20px;
+  text-align: right;
+  line-height: 1.7; }
+
 /*# sourceMappingURL=index.css.map */
