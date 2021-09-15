@@ -5,19 +5,32 @@ const mainSlide = tns({
   items: 1,
   mode: "gallery",
   autoplay: true,
-  autoplayTimeout: 7000,
+  autoplayTimeout: 3000,
   controls: false,
   nav: false,
   autoplayButtonOutput: false,
   preventScrollOnTouuch: true,
+  speed: 1500,
 });
 
-const productSlide = tns({
-  container: ".product-slide-list",
+const NewArrivalProductSlide = tns({
+  container: ".new-arrival .product-slide-list",
   items: 4,
   slideBy: "page",
   mouseDrag: true,
-  controlsContainer: ".product-slide .slide-controls",
-  navContainer: ".product-slide .slide-nav-list",
+  controlsContainer: ".new-arrival  .slide-controls",
+  navContainer: ".new-arrival  .slide-nav-list",
   preventScrollOnTouuch: true,
+  speed: 2000,
+});
+
+const BestStyleProductSlide = tns({
+  container: ".best-style .product-slide-list",
+  items: 4,
+  slideBy: "page",
+  mouseDrag: true,
+  controlsContainer: ".best-style .slide-controls",
+  navContainer: ".best-style .slide-nav-list",
+  preventScrollOnTouuch: true,
+  speed: 2000,
 });
