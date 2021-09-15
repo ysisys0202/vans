@@ -1,0 +1,59 @@
+/*30px / 1920px *100*/
+$card-padding-top: 1.5625vw;
+/*40px / 1920px *100*/
+$card-padding: 2.0833vw;
+.collection-item-card {
+  position: relative;
+  /*pt:30px pr,pb,pl:40px / 1920px * 100*/
+  padding: $card-padding-top$card-padding $card-padding;
+  /*486px/1920px*100*/
+  height: 25.3125vw;
+  background-color: $color-grey-background;
+  cursor: pointer;
+  &:first-of-type {
+    border-right: 1px solid $color-white;
+  }
+  .tag-group {
+    @include flexbox(end);
+    /*20px / 1920px * 100*/
+    margin-bottom: 1.04166vw;
+  }
+  .like-btn {
+    position: absolute;
+    top: $card-padding-top;
+    left: $card-padding;
+    font-size: 18px;
+    transition: transform 100ms ease-in-out, color 100ms ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+      color: $color-red;
+    }
+  }
+  .tag {
+    display: block;
+    margin-left: auto;
+    font-size: $font-size-16;
+    line-height: 1;
+  }
+  .img-area {
+    margin-bottom: 10px;
+  }
+  .collection-item-title {
+    /*10px / 1920px * 100*/
+    margin-bottom: 0.520833vw;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-weight: 500;
+    /*25px/18px*/
+    line-height: 1.3889;
+  }
+  .collection-item-price {
+    font-size: $font-size-14;
+    line-height: 1;
+    color: $color-grey-secondary;
+  }
+}

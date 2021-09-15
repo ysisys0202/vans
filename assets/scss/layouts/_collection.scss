@@ -1,0 +1,51 @@
+.collection {
+  &-wrapper {
+    @include flexbox($ai: stretch);
+    margin: 0 auto;
+    width: $column-width * 10;
+  }
+  &-left,
+  &-right {
+    width: 50%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &-left {
+    position: relative;
+  }
+  &-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px 20px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: $color-white;
+  }
+  &-title {
+    margin-bottom: 20px;
+    font-family: $font-family-en;
+    font-size: $font-size-48;
+    font-weight: 800;
+    line-height: 1;
+  }
+  &-desc {
+    margin-bottom: 20px;
+    /*18px / 1920px * 100*/
+    font-size: 0.9375vw;
+    line-height: 1.4;
+  }
+  &-item-group {
+    @include flexbox;
+  }
+  .link-text {
+    display: block;
+    margin: 40px auto 0;
+    padding-right: $text-indent-sm;
+    width: $column-width * 10;
+    text-align: right;
+  }
+}

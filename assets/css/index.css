@@ -63,6 +63,57 @@
     margin-top: 30px;
     color: #727272; }
 
+/*30px / 1920px *100*/
+/*40px / 1920px *100*/
+.collection-item-card {
+  position: relative;
+  /*pt:30px pr,pb,pl:40px / 1920px * 100*/
+  padding: 1.5625vw 2.0833vw 2.0833vw;
+  /*486px/1920px*100*/
+  height: 25.3125vw;
+  background-color: #efefef;
+  cursor: pointer; }
+  .collection-item-card:first-of-type {
+    border-right: 1px solid #fff; }
+  .collection-item-card .tag-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /*20px / 1920px * 100*/
+    margin-bottom: 1.04166vw; }
+  .collection-item-card .like-btn {
+    position: absolute;
+    top: 1.5625vw;
+    left: 2.0833vw;
+    font-size: 18px;
+    transition: transform 100ms ease-in-out, color 100ms ease-in-out; }
+    .collection-item-card .like-btn:hover {
+      transform: scale(1.1);
+      color: #e74c3c; }
+  .collection-item-card .tag {
+    display: block;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 1; }
+  .collection-item-card .img-area {
+    margin-bottom: 10px; }
+  .collection-item-card .collection-item-title {
+    /*10px / 1920px * 100*/
+    margin-bottom: 0.520833vw;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-weight: 500;
+    /*25px/18px*/
+    line-height: 1.3889; }
+  .collection-item-card .collection-item-price {
+    font-size: 14px;
+    line-height: 1;
+    color: #727272; }
+
 .main .fixed-area {
   margin-top: 120px;
   padding-left: 13.54167vw; }
@@ -75,6 +126,7 @@
     height: auto; }
 
 .main .scroll-area .style-item {
+  margin-left: 20px;
   font-family: "Poppins", sans-serif;
   font-size: 96px;
   font-weight: 800;
@@ -207,10 +259,61 @@
 .whats-your-style .content-desc {
   margin-top: 80px;
   margin-left: auto;
-  margin-right: 8.3333%;
+  margin-right: calc(8.33333% + 10px);
   width: 45.5%;
   font-size: 20px;
   text-align: right;
   line-height: 1.7; }
+
+.collection-wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin: 0 auto;
+  width: 83.33333%; }
+
+.collection-left, .collection-right {
+  width: 50%; }
+  .collection-left img, .collection-right img {
+    width: 100%;
+    height: auto; }
+
+.collection-left {
+  position: relative; }
+
+.collection-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px 20px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff; }
+
+.collection-title {
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1; }
+
+.collection-desc {
+  margin-bottom: 20px;
+  /*18px / 1920px * 100*/
+  font-size: 0.9375vw;
+  line-height: 1.4; }
+
+.collection-item-group {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.collection .link-text {
+  display: block;
+  margin: 40px auto 0;
+  padding-right: 10px;
+  width: 83.33333%;
+  text-align: right; }
 
 /*# sourceMappingURL=index.css.map */
