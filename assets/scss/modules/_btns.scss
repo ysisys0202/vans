@@ -1,0 +1,15 @@
+.btn-primary {
+  background-color: $color-white;
+  border: 1px solid $color-black;
+  color: $color-black;
+  transition: opacity 200ms ease-in-out;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.btn-md {
+  @include flexbox;
+  width: 160px;
+  height: 40px;
+  font-size: $font-size-16;
+}
