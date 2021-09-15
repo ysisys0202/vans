@@ -1,0 +1,62 @@
+.service {
+  margin-top: -80px;
+  padding-top: 0;
+  &-group {
+    @include flexbox;
+    padding: 0 $column-width;
+    background-color: $color-white;
+    border-top: 1px solid $color-grey-border;
+    border-bottom: 1px solid $color-grey-border;
+  }
+  &-item {
+    padding: 40px;
+    width: 25%;
+    height: 320px;
+    text-align: center;
+    &:not(:last-of-type) {
+      border-right: 1px solid $color-grey-border;
+    }
+    i {
+      display: inline-block;
+      height: 48px;
+      font-size: 48px;
+      vertical-align: middle;
+    }
+    &:nth-of-type(2) {
+      i {
+        font-size: 40px;
+      }
+    }
+    &:nth-of-type(4) {
+      i {
+        font-size: 26px;
+      }
+    }
+  }
+  .icon-group {
+    @include flexbox;
+    i {
+      position: relative;
+      top: 10px;
+      margin: 0 15px;
+      &:hover {
+        color: $color-blue-primary;
+      }
+    }
+  }
+  &-title {
+    margin: 10px 0 20px;
+    font-size: $font-size-20;
+    font-weight: 500;
+  }
+  &-desc {
+    font-size: $font-size-14;
+    line-height: 20px;
+  }
+  &-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: $font-size-12;
+    text-decoration: underline;
+  }
+}
