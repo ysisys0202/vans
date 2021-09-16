@@ -73,4 +73,16 @@
       transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
     }
   }
+  @include responsive(T) {
+    width: 33.3333%;
+  }
+  @include responsive(M) {
+    flex-shrink: 0;
+    width: 45%;
+    .news-title {
+      height: 40px;
+      font-size: $font-size-14;
+      line-height: 20px;
+    }
+  }
 }

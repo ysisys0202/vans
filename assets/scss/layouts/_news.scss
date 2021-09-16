@@ -1,5 +1,14 @@
 .news {
   .content-body {
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &-card-group {
     display: flex;
+    flex-wrap: nowrap;
   }
 }
