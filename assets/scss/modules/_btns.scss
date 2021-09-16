@@ -7,9 +7,24 @@
     opacity: 0.8;
   }
 }
+.btn-black {
+  background-color: $color-black;
+  border: 1px solid $color-black;
+  color: $color-white;
+  transition: opacity 200ms ease-in-out;
+  &:hover {
+    opacity: 0.8;
+  }
+}
 .btn-md {
   @include flexbox;
   width: 160px;
   height: 40px;
+  font-size: $font-size-16;
+}
+.btn-lg {
+  @include flexbox;
+  width: 100%;
+  height: 60px;
   font-size: $font-size-16;
 }
