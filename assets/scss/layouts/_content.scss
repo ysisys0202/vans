@@ -19,4 +19,23 @@
       }
     }
   }
+  @include responsive(T) {
+    padding: 80px 0;
+    &-header {
+      margin-bottom: 40px;
+    }
+    .link-text {
+      margin-top: 16px;
+    }
+  }
+  @include responsive(M) {
+    padding: 40px 0;
+    &-header {
+      margin-left: $text-indent-sm;
+      margin-bottom: 20px;
+    }
+    .link-text {
+      margin-top: 8px;
+    }
+  }
 }
