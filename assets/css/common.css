@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Poppins:wght@500;800&family=Dhurjati&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@500;800&family=Dhurjati&display=swap");
 html,
 body {
   overflow-x: hidden; }
@@ -250,5 +250,129 @@ i {
       transition: width 200ms ease-in-out; }
       .global-header .util-menu .sidebar-btn.is-active {
         width: 60px; }
+
+.footer-shortcut {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 0 8.33333%;
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5; }
+  .footer-shortcut .shortcut-box {
+    padding: 20px;
+    width: 20%;
+    text-align: center;
+    transform: translateX(1px); }
+    .footer-shortcut .shortcut-box:not(:last-of-type) {
+      border-right: 1px solid #e5e5e5; }
+  .footer-shortcut .shortcut-title {
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500; }
+  .footer-shortcut .sns-group {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .footer-shortcut .sns-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e5e5e5; }
+    .footer-shortcut .sns-btn i {
+      color: #727272; }
+    .footer-shortcut .sns-btn:last-of-type {
+      margin-left: -1px; }
+  .footer-shortcut .shortcut-item {
+    font-size: 14px;
+    line-height: 1;
+    color: #727272; }
+    .footer-shortcut .shortcut-item:not(:last-of-type) {
+      margin-bottom: 10px; }
+  .footer-shortcut .input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    border: 1px solid #e5e5e5; }
+    .footer-shortcut .input-wrapper .subscribe-input {
+      padding-left: 5px;
+      width: 100%;
+      border: none;
+      background-color: transparent;
+      font-size: 12px;
+      line-height: 30px; }
+      .footer-shortcut .input-wrapper .subscribe-input:focus {
+        outline: 1px solid #1642af; }
+    .footer-shortcut .input-wrapper i {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 5px; }
+  .footer-shortcut .checkbox-wrapper {
+    margin-top: 10px; }
+    .footer-shortcut .checkbox-wrapper .subscribe-checkbox {
+      margin: 0;
+      width: 14px;
+      height: 14px;
+      transform: translateY(3px); }
+    .footer-shortcut .checkbox-wrapper label {
+      font-size: 12px;
+      line-height: 1;
+      color: #727272; }
+    .footer-shortcut .checkbox-wrapper a {
+      font-size: 12px;
+      line-height: 1;
+      color: #1642af;
+      text-decoration: underline; }
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 8.33333%;
+  background-color: #5e76b1;
+  font-size: 13px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 20px; }
+  .footer-info strong {
+    color: #1642af;
+    font-weight: 400; }
+  .footer-info .logo {
+    height: 25px; }
+    .footer-info .logo img {
+      width: auto;
+      height: 100%; }
+  .footer-info .company-info {
+    width: 50%; }
+    .footer-info .company-info-item {
+      display: inline; }
+      .footer-info .company-info-item:not(:last-of-type)::after {
+        content: "/";
+        margin: 0 3px;
+        font-size: 10px;
+        line-height: 14px; }
+    .footer-info .company-info dt,
+    .footer-info .company-info dd {
+      display: inline; }
+    .footer-info .company-info dt::after {
+      content: ":";
+      margin: 0 3px; }
+    .footer-info .company-info .customer-center {
+      color: #1642af; }
+    .footer-info .company-info-text {
+      display: block; }
+  .footer-info .insurance {
+    width: 30%; }
+    .footer-info .insurance-title {
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 400; }
+    .footer-info .insurance-link {
+      text-decoration: underline; }
 
 /*# sourceMappingURL=common.css.map */

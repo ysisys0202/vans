@@ -1,0 +1,59 @@
+.footer-info {
+  @include flexbox(between);
+  padding: 80px $column-width;
+  background-color: $color-blue-secondary;
+  font-size: 13px;
+  font-weight: 300;
+  color: $color-white;
+  line-height: 20px;
+  strong {
+    color: $color-blue-primary;
+    font-weight: 400;
+  }
+  .logo {
+    height: 25px;
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+  .company-info {
+    width: 50%;
+    &-item {
+      display: inline;
+      &:not(:last-of-type)::after {
+        content: "/";
+        margin: 0 3px;
+        font-size: 10px;
+        line-height: 14px;
+      }
+    }
+    dt,
+    dd {
+      display: inline;
+    }
+    dt {
+      &::after {
+        content: ":";
+        margin: 0 3px;
+      }
+    }
+    .customer-center {
+      color: $color-blue-primary;
+    }
+    &-text {
+      display: block;
+    }
+  }
+  .insurance {
+    width: 30%;
+    &-title {
+      margin-bottom: 10px;
+      font-size: $font-size-16;
+      font-weight: 400;
+    }
+    &-link {
+      text-decoration: underline;
+    }
+  }
+}
