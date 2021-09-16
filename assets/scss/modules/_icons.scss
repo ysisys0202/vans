@@ -1,4 +1,5 @@
 i {
+  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "vans" !important;
   speak: never;
   font-style: normal;
@@ -7,46 +8,50 @@ i {
   text-transform: none;
   line-height: 1;
 
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-vans:before {
-  content: "\e90c";
-}
-.icon-arrow:before {
-  content: "\e900";
-}
-.icon-box:before {
+.icon-menu:before {
   content: "\e901";
 }
-.icon-cart:before {
+.icon-arrow:before {
   content: "\e902";
 }
-.icon-chevron:before {
+.icon-box:before {
   content: "\e903";
 }
-.icon-close:before {
+.icon-cart:before {
   content: "\e904";
 }
-.icon-delivery:before {
+.icon-chevron:before {
   content: "\e905";
 }
-.icon-facebook:before {
+.icon-close:before {
   content: "\e906";
 }
-.icon-heart:before {
+.icon-delivery:before {
   content: "\e907";
 }
-.icon-info:before {
+.icon-facebook:before {
   content: "\e908";
 }
-.icon-instagram:before {
+.icon-heart:before {
   content: "\e909";
 }
-.icon-search:before {
+.icon-info:before {
   content: "\e90a";
 }
-.icon-user:before {
+.icon-instagram:before {
   content: "\e90b";
+}
+.icon-search:before {
+  content: "\e90c";
+}
+.icon-user:before {
+  content: "\e90d";
+}
+.icon-vans:before {
+  content: "\e90e";
 }
