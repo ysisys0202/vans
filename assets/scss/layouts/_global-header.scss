@@ -98,6 +98,7 @@
       height: 25px;
     }
     .util-menu {
+      margin-right: $column-width / 2;
       &-item {
         margin-right: 10px;
         font-size: $font-size-14;
@@ -121,7 +122,7 @@
     }
     .menu-btn {
       @include pos-center-y;
-      left: $text-indent-sm;
+      left: $column-width / 2;
     }
   }
 }

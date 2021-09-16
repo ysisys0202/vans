@@ -85,7 +85,7 @@
   @include responsive(M) {
     .fixed-area,
     .scroll-area {
-      padding: 0 $text-indent-sm;
+      padding: 0 $column-width / 2;
       width: 100%;
     }
     .fixed-area {

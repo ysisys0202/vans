@@ -31,7 +31,7 @@
   @include responsive(M) {
     padding: 40px 0;
     &-header {
-      margin-left: $text-indent-sm;
+      margin-left: $column-width / 2;
       margin-bottom: 20px;
     }
     .link-text {
