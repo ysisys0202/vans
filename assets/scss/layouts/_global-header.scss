@@ -1,5 +1,7 @@
 .global-header {
   @include flexbox(start);
+  position: relative;
+  z-index: 100;
   padding: 0 8.3333%;
   height: 60px;
   background-color: $color-white;
