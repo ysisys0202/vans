@@ -59,7 +59,7 @@
         color: $color-white;
       }
     }
-    .sidebar-btn {
+    .search-box-btn {
       @include flexbox(between);
       padding: 0 20px;
       width: 250px;
@@ -71,7 +71,57 @@
       transition: width 200ms ease-in-out;
       &.is-active {
         width: 60px;
+        span {
+          display: none;
+        }
       }
+    }
+  }
+  .menu-btn {
+    font-size: $font-size-18;
+  }
+  @include responsive(D) {
+    padding: 0;
+  }
+  @include responsive(T) {
+    .util-menu {
+      .search-box-btn {
+        @include flexbox(between);
+        width: 60px;
+      }
+    }
+  }
+  @include responsive(M) {
+    height: 50px;
+    .logo {
+      @include pos-center;
+      height: 25px;
+    }
+    .util-menu {
+      &-item {
+        margin-right: 10px;
+        font-size: $font-size-14;
+        .badge {
+          top: -10px;
+          right: -10px;
+          padding: 5px;
+          height: 14px;
+          font-size: 8px;
+        }
+      }
+      .search-box-btn {
+        display: inline-block;
+        padding: 0 $text-indent-sm;
+        width: auto;
+        height: 50px;
+        background-color: transparent;
+        font-size: $font-size-14;
+        color: $color-grey-primary;
+      }
+    }
+    .menu-btn {
+      @include pos-center-y;
+      left: $text-indent-sm;
     }
   }
 }

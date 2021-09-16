@@ -15,7 +15,7 @@
       <h1 class="logo">
         <img src="./assets/images/common/logo.svg" alt="반스" />
       </h1>
-      <nav class="global-nav">
+      <nav class="global-nav sm-hidden">
         <ul class="global-nav-list">
           <li class="global-nav-item"><a href="#">신발</a></li>
           <li class="global-nav-item"><a href="#">의류</a></li>
@@ -28,7 +28,10 @@
       </nav>
       <div class="util-menu">
         <ul class="util-menu-list">
-          <li class="util-menu-item" aria-label="로그인 화면으로 이동">
+          <li
+            class="util-menu-item sm-hidden"
+            aria-label="로그인 화면으로 이동"
+          >
             <a href="#">
               <i class="icon-user" aria-hidden="true"></i>
             </a>
@@ -39,22 +42,28 @@
               <strong class="badge">0</strong>
             </a>
           </li>
-          <li class="util-menu-item">
+          <li class="util-menu-item sm-hidden">
             <a href="#">
               <i class="icon-heart" aria-hidden="true"></i>
             </a>
           </li>
-          <li class="util-menu-item" aria-label="인포메이션 화면으로 이동">
+          <li
+            class="util-menu-item sm-hidden"
+            aria-label="인포메이션 화면으로 이동"
+          >
             <a href="#">
               <i class="icon-info" aria-hidden="true"></i>
             </a>
           </li>
         </ul>
         <button class="search-box-btn" aria-label="검색창 열기 버튼">
-          <span>검색</span>
+          <span class="lg-only">검색</span>
           <i class="icon-search" aria-hidden="true"></i>
         </button>
       </div>
+      <button class="menu-btn sm-only" aria-label="메뉴 열기">
+        <i class="icon-menu" aria-hidden="true"></i>
+      </button>
     </header>
     <!-- /.global-header -->
     <section class="content main">
