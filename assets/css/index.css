@@ -503,8 +503,7 @@
     margin-right: 3px; }
 
 .service {
-  margin-top: -80px;
-  padding-top: 0; }
+  padding: 0 0 160px; }
   .service-group {
     display: flex;
     align-items: center;
