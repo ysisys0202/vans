@@ -144,4 +144,9 @@ button {
 img {
   display: block; }
 
+input {
+  border: none;
+  outline: none;
+  background: transparent; }
+
 /*# sourceMappingURL=reset.css.map */
