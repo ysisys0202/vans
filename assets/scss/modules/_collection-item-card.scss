@@ -5,7 +5,7 @@ $card-padding: 2.0833vw;
 .collection-item-card {
   position: relative;
   /*pt:30px pr,pb,pl:40px / 1920px * 100*/
-  padding: $card-padding-top$card-padding $card-padding;
+  padding: $card-padding-top $card-padding $card-padding;
   /*486px/1920px*100*/
   height: 25.3125vw;
   background-color: $color-grey-background;
@@ -38,6 +38,11 @@ $card-padding: 2.0833vw;
   .img-area {
     margin-bottom: 10px;
   }
+  .info-area {
+    position: absolute;
+    bottom: $card-padding;
+    left: $card-padding;
+  }
   .collection-item-title {
     /*10px / 1920px * 100*/
     margin-bottom: 0.520833vw;
@@ -55,5 +60,27 @@ $card-padding: 2.0833vw;
     font-size: $font-size-14;
     line-height: 1;
     color: $color-grey-secondary;
+  }
+  @include responsive(D) {
+    .collection-item-title {
+      height: 36px;
+      font-size: $font-size-14;
+      line-height: 18px;
+    }
+    .collection-item-price {
+      font-size: $font-size-12;
+    }
+  }
+  @include responsive(T) {
+    /* 400px/ 768px * 100 */
+    height: 52.08333vw;
+  }
+  @include responsive(M) {
+    .like-btn {
+      font-size: $font-size-14;
+    }
+    .tag {
+      font-size: $font-size-12;
+    }
   }
 }

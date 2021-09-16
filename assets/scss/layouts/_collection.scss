@@ -48,4 +48,39 @@
     width: $column-width * 10;
     text-align: right;
   }
+  @include responsive(T) {
+    &-wrapper {
+      flex-direction: column;
+    }
+    &-left,
+    &-right {
+      width: 100%;
+    }
+    &-info {
+      padding: 60px 40px;
+    }
+    &-desc {
+      font-size: $font-size-14;
+    }
+    .link-btn {
+      margin: 20px 0;
+    }
+  }
+  @include responsive(M) {
+    &-wrapper {
+      padding: 0 $column-width/2;
+      width: 100%;
+    }
+    &-info {
+      padding: 20px 16px;
+    }
+    &-title {
+      margin-bottom: 10px;
+      font-size: $font-size-24;
+    }
+    &-desc {
+      font-size: $font-size-12;
+      font-weight: 300;
+    }
+  }
 }
