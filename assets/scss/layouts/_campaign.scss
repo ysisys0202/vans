@@ -7,6 +7,7 @@ $content-padding: 160px;
     /* 150px / 1920px * 100*/
     top: calc(160px + 7.8125vw);
     z-index: 10;
+    width: 100%;
     text-align: center;
   }
   .banner-title {
@@ -25,12 +26,12 @@ $content-padding: 160px;
     @include flexbox;
     margin: 0 auto;
     width: $column-width * 8;
-    background-color: $color-black;
   }
   &-item {
     position: relative;
     overflow: hidden;
     width: 50%;
+    background-color: $color-black;
     &:hover {
       .campaign-img {
         opacity: 0.9;
@@ -67,5 +68,84 @@ $content-padding: 160px;
     margin-top: 40px;
     text-align: center;
     color: $color-grey-primary;
+  }
+  @include responsive(D) {
+    .banner-sub-title {
+      font-size: $font-size-14;
+    }
+  }
+  @include responsive(T) {
+    .banner-header {
+      top: calc(80px + 7.8125vw);
+    }
+    .banner-title {
+      font-size: 48px;
+    }
+    &-item {
+      width: 100%;
+      display: none;
+      &.is-active {
+        display: block;
+      }
+    }
+    &-info {
+      /*180px / 768px *100*/
+      bottom: 23.4375vw;
+    }
+    &-title {
+      font-size: $font-size-24;
+    }
+    .tab-btn-group {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .tab-btn {
+      &:first-child::after {
+        content: "/";
+        margin: 0 10px 0 14px;
+        font-size: $font-size-20;
+        color: $color-grey-secondary;
+      }
+      span {
+        font-size: $font-size-20;
+        font-weight: 700;
+        color: $color-grey-secondary;
+      }
+      &.is-active span {
+        color: $color-grey-primary;
+        border-bottom: 1px solid $color-grey-primary;
+      }
+    }
+  }
+  @include responsive(M) {
+    .banner-header {
+      top: calc(40px + 15%);
+    }
+    .banner-title {
+      font-size: $font-size-24;
+    }
+    .banner-sub-title {
+      font-size: 8px;
+    }
+    &-wrapper {
+      padding: 0 $column-width/2;
+      width: 100%;
+    }
+    &-title {
+      margin-bottom: 24px;
+      font-size: $font-size-18;
+    }
+    .tab-btn-group {
+      margin-top: 20px;
+    }
+    .tab-btn {
+      &:first-child::after {
+        margin: 0 5px 0 7px;
+        font-size: $font-size-12;
+      }
+      span {
+        font-size: $font-size-12;
+      }
+    }
   }
 }
