@@ -14,6 +14,34 @@ body {
   white-space: nowrap !important;
   border: 0 !important; }
 
+@media screen and (min-width: 769px) {
+  .sm-only {
+    display: none !important; } }
+
+@media screen and (max-width: 768px) {
+  .md-only {
+    display: none !important; } }
+
+@media screen and (min-width: 1025px) {
+  .md-only {
+    display: none !important; } }
+
+@media screen and (max-width: 1024px) {
+  .lg-only {
+    display: none !important; } }
+
+@media screen and (max-width: 768px) {
+  .sm-hidden {
+    display: none !important; } }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .md-hidden {
+    display: none !important; } }
+
+@media screen and (min-width: 1025px) {
+  .lg-hidden {
+    display: none !important; } }
+
 @font-face {
   font-family: "vans";
   src: url("../fonts/vans.eot");
@@ -258,7 +286,7 @@ i {
         background-color: #5e76b1;
         font-size: 8px;
         color: #fff; }
-    .global-header .util-menu .sidebar-btn {
+    .global-header .util-menu .search-box-btn {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -270,8 +298,52 @@ i {
       font-weight: 500;
       color: #fff;
       transition: width 200ms ease-in-out; }
-      .global-header .util-menu .sidebar-btn.is-active {
+      .global-header .util-menu .search-box-btn.is-active {
         width: 60px; }
+        .global-header .util-menu .search-box-btn.is-active span {
+          display: none; }
+  .global-header .menu-btn {
+    font-size: 18px; }
+  @media screen and (max-width: 1200px) {
+    .global-header {
+      padding: 0; } }
+  @media screen and (max-width: 1024px) {
+    .global-header .util-menu .search-box-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 60px; } }
+  @media screen and (max-width: 768px) {
+    .global-header {
+      height: 50px; }
+      .global-header .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 25px; }
+      .global-header .util-menu-item {
+        margin-right: 10px;
+        font-size: 14px; }
+        .global-header .util-menu-item .badge {
+          top: -10px;
+          right: -10px;
+          padding: 5px;
+          height: 14px;
+          font-size: 8px; }
+      .global-header .util-menu .search-box-btn {
+        display: inline-block;
+        padding: 0 10px;
+        width: auto;
+        height: 50px;
+        background-color: transparent;
+        font-size: 14px;
+        color: #333333; }
+      .global-header .menu-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px; } }
 
 .footer-shortcut {
   display: flex;
