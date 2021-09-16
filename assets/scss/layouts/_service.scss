@@ -2,6 +2,7 @@
   padding: 0 0 160px;
   &-group {
     @include flexbox;
+    flex-wrap: wrap;
     padding: 0 $column-width;
     background-color: $color-white;
     border-top: 1px solid $color-grey-border;
@@ -57,5 +58,44 @@
     margin-top: 20px;
     font-size: $font-size-12;
     text-decoration: underline;
+  }
+  @include responsive(T) {
+    padding-bottom: 80px;
+    &-item {
+      width: 50%;
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        border-bottom: 1px solid $color-grey-border;
+      }
+      &:nth-of-type(2) {
+        border-right: none;
+      }
+    }
+    .icon-group {
+      i {
+        margin: 0 7px;
+      }
+    }
+    &-title {
+      margin: 10px 0 20px;
+      font-size: $font-size-16;
+    }
+    &-desc {
+      font-size: $font-size-12;
+      line-height: 20px;
+    }
+  }
+  @include responsive(M) {
+    padding-bottom: 40px;
+    &-wrapper {
+      padding: 0 $column-width/2;
+    }
+    &-item {
+      padding: 10px;
+    }
+    &-desc {
+      font-size: 8px;
+      line-height: 10px;
+    }
   }
 }
