@@ -5,12 +5,15 @@ const mainSlide = tns({
   items: 1,
   mode: "gallery",
   autoplay: true,
-  autoplayTimeout: 3000,
+  autoplayTimeout: 5000,
   controls: false,
   nav: false,
   autoplayButtonOutput: false,
   preventScrollOnTouuch: true,
-  speed: 1500,
+  animateIn: "tns-fade-in",
+  animateOut: "tns-fade-out",
+  speed: 2000,
+  animateDelay: 2000,
 });
 
 const NewArrivalProductSlide = tns({
