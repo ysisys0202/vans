@@ -1,9 +1,3 @@
-.main-title {
-  font-family: $font-family-en;
-  font-size: $font-size-96;
-  font-weight: 800;
-  line-height: 1;
-}
 .content-title {
   font-family: $font-family-en;
   font-size: $font-size-48;
@@ -13,4 +7,20 @@
 .link-text {
   font-size: $font-size-18;
   line-height: 1;
+}
+@include responsive(T) {
+  .content-title {
+    font-size: $font-size-36;
+  }
+  .link-text {
+    font-size: $font-size-16;
+  }
+}
+@include responsive(M) {
+  .content-title {
+    font-size: $font-size-24;
+  }
+  .link-text {
+    font-size: $font-size-14;
+  }
 }
