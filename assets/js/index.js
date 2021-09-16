@@ -18,22 +18,38 @@ const mainSlide = tns({
 
 const NewArrivalProductSlide = tns({
   container: ".new-arrival .product-slide-list",
-  items: 4,
+  items: 2,
   slideBy: "page",
   mouseDrag: true,
-  controlsContainer: ".new-arrival  .slide-controls",
-  navContainer: ".new-arrival  .slide-nav-list",
+  controlsContainer: ".new-arrival .slide-controls",
+  navContainer: ".new-arrival .slide-nav-list",
   preventScrollOnTouuch: true,
   speed: 2000,
+  responsive: {
+    769: {
+      items: 3,
+    },
+    1025: {
+      items: 4,
+    },
+  },
 });
 
 const BestStyleProductSlide = tns({
   container: ".best-style .product-slide-list",
-  items: 4,
+  items: 2,
   slideBy: "page",
   mouseDrag: true,
   controlsContainer: ".best-style .slide-controls",
   navContainer: ".best-style .slide-nav-list",
   preventScrollOnTouuch: true,
   speed: 2000,
+  responsive: {
+    769: {
+      items: 3,
+    },
+    1025: {
+      items: 4,
+    },
+  },
 });
