@@ -1,11 +1,17 @@
 .whats-your-style {
   .film-wrapper {
     position: relative;
-    /*480px/1920px*100*/
-    padding-bottom: 25%;
     /*1430px / 1920px * 100*/
     width: 74.4791%;
-    height: 0;
+    padding-bottom: 26%;
+  }
+  .film-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*480px/1430px*100*/
+    padding-bottom: 33.56643%;
+    width: 100%;
   }
   .film {
     @include flexbox(start);
@@ -92,5 +98,38 @@
     font-size: $font-size-20;
     text-align: right;
     line-height: 1.7;
+  }
+  @include responsive(D) {
+    .film-wrapper {
+      width: 90%;
+      padding-bottom: 33%;
+    }
+    .content-desc {
+      margin-top: 60px;
+      margin-right: $column-width / 2;
+      width: 60%;
+      font-size: $font-size-18;
+    }
+  }
+  @include responsive(M) {
+    .film-container {
+      overflow-x: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .film-wrapper {
+      width: 200%;
+      padding-bottom: 70%;
+    }
+    .content-desc {
+      margin: 20px auto 0;
+      padding: 0 $column-width/2;
+      width: 100%;
+      font-size: $font-size-12;
+      text-align: left;
+    }
   }
 }
