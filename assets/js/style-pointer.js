@@ -3,7 +3,6 @@
   const styleList = document.querySelector(".style-list");
   const styleItems = document.querySelectorAll(".style-item");
   const pointer = document.querySelector(".style-pointer");
-
   const styleNames = ["slip-on", "authentic", "era", "oldskool", "sk8-hi"];
   let targetItem = null;
 
@@ -22,18 +21,26 @@
       }
     }
   }
+
   function makePointerImg() {
     const pointerImg = document.createElement("img");
     pointerImg.classList.add("style-pointer-img");
     pointer.appendChild(pointerImg);
   }
+
   function removePointerImg() {
     const pointerImg = document.querySelector(".style-pointer-img");
     if (!pointerImg) {
       return;
     }
+
     pointerImg.remove();
   }
+
+  function setPointerPos(posX, posY) {
+    pointer.style.transform = `translate3d(${posX}px,${posY}px,0)`;
+  }
+
   function setPointerImgPath(idx) {
     const pointerImg = document.querySelector(".style-pointer-img");
     if (!pointerImg) {
@@ -45,44 +52,115 @@
     );
     pointerImg.setAttribute("alt", `${styleNames[idx]}`);
   }
-  function setPointerPos(posX, posY) {
-    pointer.style.transform = `translate3d(${posX}px,${posY}px,0)`;
-  }
+
   function init() {
     setDataIdx(styleItems);
   }
+
   function styleMouseEnterHander() {
     makePointerImg();
   }
-  function moveScroll(scrollPos) {
-    window.scrollTo({
-      top: scrollPos,
-      behavior: "smooth",
-    });
+
+  function activateItem(item) {
+    if (item.classList.contains("is-active")) {
+      return;
+    }
+    item.classList.add("is-active");
   }
+  function inactivateItem(item) {
+    if (!item.classList.contains("is-active")) {
+      return;
+    }
+    item.classList.remove("is-active");
+  }
+
   function styleMouseOverHander(e) {
     targetItem = e.target;
     findTargetItem("style-item");
-    if (targetItem) {
-      const targetIdx = targetItem.dataset.idx;
-      const targetPos = targetItem.offsetTop / 2;
-      console.log(targetPos);
-      setPointerImgPath(targetIdx);
-      moveScroll(targetPos);
+    if (!targetItem) {
+      return;
     }
+    const targetIdx = targetItem.dataset.idx;
+    const targetRect = targetItem.getBoundingClientRect();
+    if (window.innerWidth <= 1024) {
+      return;
+    }
+    styleItems.forEach((styleItem) => {
+      inactivateItem(styleItem);
+    });
+    activateItem(targetItem);
+    setPointerPos(
+      targetRect.right + 20,
+      targetRect.bottom - pointer.getBoundingClientRect().height,
+    );
+    setPointerImgPath(targetIdx);
   }
-  function styleMouseLeaveHander(e) {
+  function styleMouseOutHander(e) {
+    targetItem = e.target;
+    findTargetItem("style-item");
+    if (!targetItem) {
+      return;
+    }
+    if (window.innerWidth <= 1024) {
+      return;
+    }
+    inactivateItem(targetItem);
+  }
+  function styleMouseLeaveHander() {
+    if (window.innerWidth <= 1024) {
+      return;
+    }
     removePointerImg();
   }
+
   function styleMouseMoveHander(e) {
-    const mouseXPos = e.clientX + 10;
-    const mouseYPos = e.clientY - 20;
+    const mouseXPos = e.clientX + 40;
+    const mouseYPos = e.clientY - (pointerRect.height * 2) / 3;
+    if (window.innerWidth <= 1024) {
+      return;
+    }
     setPointerPos(mouseXPos, mouseYPos);
   }
+
+  function scrollHandler() {
+    const scrollYPos = window.pageYOffset;
+    const styleListRect = styleList.getBoundingClientRect();
+
+    styleItems.forEach((styleItem, idx) => {
+      const styleItemRect = styleItem.getBoundingClientRect();
+      const startPos = styleItemRect.top + scrollYPos - window.innerHeight / 2;
+      const endPos = startPos + styleItemRect.height + 10;
+      if (scrollYPos > startPos && scrollYPos < endPos) {
+        if (idx === 0 && scrollYPos > startPos) {
+          makePointerImg();
+        }
+        if (idx === styleItems.length - 1 && scrollYPos < endPos) {
+          makePointerImg();
+        }
+        activateItem(styleItem);
+        setPointerImgPath(idx);
+        setPointerPos(
+          styleItemRect.right + 20,
+          styleItemRect.bottom - pointer.getBoundingClientRect().height,
+        );
+      } else {
+        inactivateItem(styleItem);
+        if (idx === 0 && scrollYPos < startPos) {
+          removePointerImg();
+        }
+        if (idx === styleItems.length - 1 && scrollYPos > endPos) {
+          removePointerImg();
+        }
+      }
+    });
+  }
+
   init();
 
+  window.addEventListener("scroll", scrollHandler);
   styleList.addEventListener("mouseover", styleMouseOverHander);
-  styleList.addEventListener("mouseenter", styleMouseEnterHander);
-  styleList.addEventListener("mouseleave", styleMouseLeaveHander);
-  styleList.addEventListener("mousemove", styleMouseMoveHander);
+  //styleList.addEventListener("mouseout", styleMouseOutHander);
+  //styleList.addEventListener("mouseenter", styleMouseEnterHander);
+  //styleList.addEventListener("mouseleave", styleMouseLeaveHander);
+  // styleList.addEventListener("mousemove", styleMouseMoveHander);
 }

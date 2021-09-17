@@ -50,7 +50,7 @@
         color: $color-white;
         transition: color 200ms ease-in-out;
 
-        &:hover {
+        &.is-active {
           color: $color-grey-primary;
         }
         &:not(:last-child) {
@@ -62,7 +62,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 200px;
+        width: 140px;
         z-index: 1;
         pointer-events: none;
       }
@@ -107,7 +107,7 @@
       }
       .style {
         &-pointer {
-          width: 150px;
+          width: 70px;
         }
       }
     }
@@ -134,7 +134,7 @@
           font-size: 11.25vw;
         }
         &-pointer {
-          width: 80px;
+          width: 40px;
         }
       }
     }
