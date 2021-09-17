@@ -62,8 +62,13 @@
         position: fixed;
         top: 0;
         left: 0;
+        width: 200px;
         z-index: 1;
         pointer-events: none;
+      }
+      &-pointer-img {
+        width: 100%;
+        height: auto;
       }
     }
   }
@@ -91,14 +96,19 @@
       width: $column-width * 8;
     }
     .fixed-area {
+      padding-top: 80px;
       padding-left: $text-indent-sm;
-      margin-bottom: 40px;
     }
     .scroll-area {
       margin: 0;
       padding-top: 0;
       .main-slide {
         width: 100%;
+      }
+      .style {
+        &-pointer {
+          width: 150px;
+        }
       }
     }
   }
@@ -109,6 +119,7 @@
       width: 100%;
     }
     .fixed-area {
+      padding-top: 40px;
       margin-bottom: 20px;
       .main-title {
         /*36px / 320px *100*/
@@ -121,6 +132,9 @@
           margin-left: 0;
           /*36px / 320px *100*/
           font-size: 11.25vw;
+        }
+        &-pointer {
+          width: 80px;
         }
       }
     }

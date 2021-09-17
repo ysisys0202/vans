@@ -273,8 +273,12 @@
       position: fixed;
       top: 0;
       left: 0;
+      width: 200px;
       z-index: 1;
       pointer-events: none; }
+    .main .scroll-area .style-pointer-img {
+      width: 100%;
+      height: auto; }
   @media screen and (max-width: 1200px) {
     .main .fixed-area .main-title {
       font-size: 72px; }
@@ -288,19 +292,22 @@
     .main .scroll-area {
       width: 66.66667%; }
     .main .fixed-area {
-      padding-left: 10px;
-      margin-bottom: 40px; }
+      padding-top: 80px;
+      padding-left: 10px; }
     .main .scroll-area {
       margin: 0;
       padding-top: 0; }
       .main .scroll-area .main-slide {
-        width: 100%; } }
+        width: 100%; }
+      .main .scroll-area .style-pointer {
+        width: 150px; } }
   @media screen and (max-width: 768px) {
     .main .fixed-area,
     .main .scroll-area {
       padding: 0 4.16667%;
       width: 100%; }
     .main .fixed-area {
+      padding-top: 40px;
       margin-bottom: 20px; }
       .main .fixed-area .main-title {
         /*36px / 320px *100*/
@@ -308,7 +315,9 @@
     .main .scroll-area .style-item {
       margin-left: 0;
       /*36px / 320px *100*/
-      font-size: 11.25vw; } }
+      font-size: 11.25vw; }
+    .main .scroll-area .style-pointer {
+      width: 80px; } }
 
 .product-slide {
   width: 100%; }
