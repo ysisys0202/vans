@@ -18,7 +18,7 @@
     const endPos = startPos + scrollAreaRect.height - fixedAreaRect.height;
     const scrollRange = scrollAreaRect.height - fixedAreaRect.height;
 
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth <= 1024) {
       return;
     }
     if (scrollPos >= startPos && scrollPos < endPos) {
@@ -35,6 +35,10 @@
       }
     }
   }
-
+  window.addEventListener("resize", () => {
+    if (window.innerWidth <= 1024) {
+      inactivateFixed();
+    }
+  });
   window.addEventListener("scroll", scrollHandler);
 }
