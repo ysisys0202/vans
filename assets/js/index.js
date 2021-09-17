@@ -33,6 +33,7 @@ const NewArrivalProductSlide = tns({
       items: 4,
     },
   },
+  preventScrollOnTouch: true,
 });
 
 const BestStyleProductSlide = tns({
@@ -52,4 +53,5 @@ const BestStyleProductSlide = tns({
       items: 4,
     },
   },
+  preventScrollOnTouch: true,
 });
