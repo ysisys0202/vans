@@ -1,11 +1,11 @@
 .main {
+  padding-top: 0;
   .content-body {
-    @include flexbox($ai: start);
+    @include flexbox(end, start);
   }
   .fixed-area {
     width: $column-width * 5;
-    /*120px / 1920px *100*/
-    margin-top: 6.25vw;
+    padding-top: 280px;
     padding-left: 13.54167vw;
     .main-title {
       font-family: $font-family-en;
@@ -13,8 +13,14 @@
       font-weight: 800;
       line-height: 1;
     }
+    &.is-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
   }
   .scroll-area {
+    padding-top: 160px;
     width: $column-width * 7;
     .main-slide {
       /*100px / 1920px *100*/
@@ -54,11 +60,9 @@
       }
       &-pointer {
         position: fixed;
-        top: 0;
-        left: 0;
         z-index: 1;
         pointer-events: none;
-        transition: transform 100ms linear;
+        transition: transform 1000ms linear;
       }
     }
   }
@@ -91,6 +95,7 @@
     }
     .scroll-area {
       margin: 0;
+      padding-top: 0;
       .main-slide {
         width: 100%;
       }
