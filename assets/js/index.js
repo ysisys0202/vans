@@ -1,5 +1,7 @@
 "use strict";
 
+import SideMenu from "./side-menu.js";
+
 const mainSlide = tns({
   container: ".main-slide-list",
   items: 1,
@@ -55,3 +57,5 @@ const BestStyleProductSlide = tns({
   },
   preventScrollOnTouch: true,
 });
+
+const searchBox = new SideMenu(".search-box", ".search-box-btn", "search");
