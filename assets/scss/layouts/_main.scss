@@ -26,7 +26,13 @@
       }
     }
     .style {
+      &-list {
+        @include inline-flexbox(start, start);
+        flex-direction: column;
+      }
       &-item {
+        position: relative;
+        z-index: 10;
         margin-left: $text-indent-md;
         font-family: $font-family-en;
         font-size: $font-size-96;
@@ -45,6 +51,14 @@
           /*60px / 1920px *100*/
           margin-bottom: 3.125vw;
         }
+      }
+      &-pointer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        pointer-events: none;
+        transition: transform 100ms linear;
       }
     }
   }
