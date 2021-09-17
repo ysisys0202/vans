@@ -77,8 +77,8 @@
       }
     }
   }
-  .menu-btn {
-    font-size: $font-size-18;
+  .mobile-menu-btn {
+    font-size: $font-size-14;
   }
   @include responsive(D) {
     padding: 0;
@@ -123,7 +123,7 @@
         }
       }
     }
-    .menu-btn {
+    .mobile-menu-btn {
       @include pos-center-y;
       left: $column-width / 2;
     }

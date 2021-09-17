@@ -59,3 +59,4 @@ const BestStyleProductSlide = tns({
 });
 
 const searchBox = new SideMenu(".search-box", ".search-box-btn", "search");
+const mobileNav = new SideMenu(".mobile-menu", ".mobile-menu-btn", "menu");
