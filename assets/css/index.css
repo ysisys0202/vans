@@ -219,95 +219,96 @@
         font-size: 14px;
         line-height: 20px; } }
 
-.main .content-body {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center; }
-
-.main .fixed-area {
-  width: 41.66667%;
-  /*120px / 1920px *100*/
-  margin-top: 6.25vw;
-  padding-left: 13.54167vw; }
-  .main .fixed-area .main-title {
-    font-family: "Poppins", sans-serif;
-    font-size: 96px;
-    font-weight: 800;
-    line-height: 1; }
-
-.main .scroll-area {
-  width: 58.33333%; }
-  .main .scroll-area .main-slide {
-    /*100px / 1920px *100*/
-    margin-bottom: 5.20833vw;
-    width: 43.75vw; }
-    .main .scroll-area .main-slide-image {
-      width: 100%;
-      height: auto; }
-  .main .scroll-area .style-list {
-    display: inline-flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column; }
-  .main .scroll-area .style-item {
-    position: relative;
-    z-index: 10;
-    margin-left: 20px;
-    font-family: "Poppins", sans-serif;
-    font-size: 96px;
-    font-weight: 800;
-    line-height: 1;
-    text-shadow: -1px -1px 0 #333333, 1px -1px 0 #333333, -1px 1px 0 #333333, 1px 1px 0 #333333;
-    color: #fff;
-    transition: color 200ms ease-in-out; }
-    .main .scroll-area .style-item:hover {
-      color: #333333; }
-    .main .scroll-area .style-item:not(:last-child) {
-      /*60px / 1920px *100*/
-      margin-bottom: 3.125vw; }
-  .main .scroll-area .style-pointer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    pointer-events: none;
-    transition: transform 100ms linear; }
-
-@media screen and (max-width: 1200px) {
-  .main .fixed-area .main-title {
-    font-size: 72px; }
-  .main .scroll-area .style-item {
-    font-size: 72px; } }
-
-@media screen and (max-width: 1024px) {
+.main {
+  padding-top: 0; }
   .main .content-body {
-    align-items: center;
-    flex-direction: column; }
-  .main .fixed-area,
-  .main .scroll-area {
-    width: 66.66667%; }
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end; }
   .main .fixed-area {
-    padding-left: 10px;
-    margin-bottom: 40px; }
-  .main .scroll-area {
-    margin: 0; }
-    .main .scroll-area .main-slide {
-      width: 100%; } }
-
-@media screen and (max-width: 768px) {
-  .main .fixed-area,
-  .main .scroll-area {
-    padding: 0 4.16667%;
-    width: 100%; }
-  .main .fixed-area {
-    margin-bottom: 20px; }
+    width: 41.66667%;
+    padding-top: 280px;
+    padding-left: 13.54167vw; }
     .main .fixed-area .main-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 96px;
+      font-weight: 800;
+      line-height: 1; }
+    .main .fixed-area.is-fixed {
+      position: fixed;
+      top: 0;
+      left: 0; }
+  .main .scroll-area {
+    padding-top: 160px;
+    width: 58.33333%; }
+    .main .scroll-area .main-slide {
+      /*100px / 1920px *100*/
+      margin-bottom: 5.20833vw;
+      width: 43.75vw; }
+      .main .scroll-area .main-slide-image {
+        width: 100%;
+        height: auto; }
+    .main .scroll-area .style-list {
+      display: inline-flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column; }
+    .main .scroll-area .style-item {
+      position: relative;
+      z-index: 10;
+      margin-left: 20px;
+      font-family: "Poppins", sans-serif;
+      font-size: 96px;
+      font-weight: 800;
+      line-height: 1;
+      text-shadow: -1px -1px 0 #333333, 1px -1px 0 #333333, -1px 1px 0 #333333, 1px 1px 0 #333333;
+      color: #fff;
+      transition: color 200ms ease-in-out; }
+      .main .scroll-area .style-item:hover {
+        color: #333333; }
+      .main .scroll-area .style-item:not(:last-child) {
+        /*60px / 1920px *100*/
+        margin-bottom: 3.125vw; }
+    .main .scroll-area .style-pointer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: none; }
+  @media screen and (max-width: 1200px) {
+    .main .fixed-area .main-title {
+      font-size: 72px; }
+    .main .scroll-area .style-item {
+      font-size: 72px; } }
+  @media screen and (max-width: 1024px) {
+    .main .content-body {
+      align-items: center;
+      flex-direction: column; }
+    .main .fixed-area,
+    .main .scroll-area {
+      width: 66.66667%; }
+    .main .fixed-area {
+      padding-left: 10px;
+      margin-bottom: 40px; }
+    .main .scroll-area {
+      margin: 0;
+      padding-top: 0; }
+      .main .scroll-area .main-slide {
+        width: 100%; } }
+  @media screen and (max-width: 768px) {
+    .main .fixed-area,
+    .main .scroll-area {
+      padding: 0 4.16667%;
+      width: 100%; }
+    .main .fixed-area {
+      margin-bottom: 20px; }
+      .main .fixed-area .main-title {
+        /*36px / 320px *100*/
+        font-size: 11.25vw; }
+    .main .scroll-area .style-item {
+      margin-left: 0;
       /*36px / 320px *100*/
-      font-size: 11.25vw; }
-  .main .scroll-area .style-item {
-    margin-left: 0;
-    /*36px / 320px *100*/
-    font-size: 11.25vw; } }
+      font-size: 11.25vw; } }
 
 .product-slide {
   width: 100%; }
