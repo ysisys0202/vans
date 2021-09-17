@@ -22,6 +22,7 @@ export default class SideMenu {
     this.btn.classList.add("is-active");
     this.btn.innerHTML = '<i class="icon-close" aria-hidden="true"></i>';
     this.overlay.classList.add("is-active");
+    document.querySelector("html").style.overflowY = "hidden";
     document.body.style.overflowY = "hidden";
   }
   inactive(type) {
@@ -30,6 +31,7 @@ export default class SideMenu {
     this.btn.innerHTML = ` <span class="lg-only">검색</span>
     <i class="icon-${type}" aria-hidden="true"></i>`;
     this.overlay.classList.remove("is-active");
-    document.body.style.overflowY = "visible";
+    document.querySelector("html").style.overflowY = "visible";
+    document.body.style.overflow = "visible";
   }
 }
