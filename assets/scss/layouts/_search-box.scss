@@ -175,8 +175,7 @@
     }
   }
   @include responsive(T) {
-    top: 50px;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 60px);
 
     &-group {
       align-items: start;
@@ -190,6 +189,7 @@
       height: auto;
     }
     &-left {
+      border-right: none;
       .search-item-wrapper {
         height: 50vw;
       }
@@ -227,6 +227,8 @@
     }
   }
   @include responsive(M) {
+    top: 50px;
+    height: calc(100vh - 50px);
     &-left {
       display: block;
     }

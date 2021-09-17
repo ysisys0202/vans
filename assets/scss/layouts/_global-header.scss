@@ -118,6 +118,9 @@
         background-color: transparent;
         font-size: $font-size-14;
         color: $color-grey-primary;
+        &.is-active {
+          width: auto;
+        }
       }
     }
     .menu-btn {
