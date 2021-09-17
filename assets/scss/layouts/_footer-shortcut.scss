@@ -83,4 +83,13 @@
       text-decoration: underline;
     }
   }
+  @include responsive(T) {
+    padding: 0;
+  }
+  @include responsive(M) {
+    .shortcut-box {
+      padding: 40px 20px;
+      width: 100%;
+    }
+  }
 }

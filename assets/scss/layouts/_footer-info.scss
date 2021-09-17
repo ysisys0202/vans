@@ -56,4 +56,33 @@
       text-decoration: underline;
     }
   }
+  @include responsive(M) {
+    flex-direction: column;
+    padding: 40px $column-width/2;
+    font-size: 10px;
+    .logo {
+      margin-bottom: 20px;
+    }
+    .company-info {
+      width: 100%;
+      white-space: nowrap;
+      &-item {
+        display: block;
+        text-align: center;
+        &:not(:last-of-type)::after {
+          content: "";
+        }
+      }
+      &-text {
+        text-align: center;
+      }
+    }
+    .policy {
+      a:first-of-type::after {
+        content: "/";
+        margin: 0 4px;
+        color: $color-blue-primary;
+      }
+    }
+  }
 }
