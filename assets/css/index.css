@@ -840,7 +840,8 @@
       .service-wrapper {
         padding: 0 4.16667%; }
       .service-item {
-        padding: 10px; }
+        padding: 10px;
+        height: 210px; }
       .service-desc {
         font-size: 8px;
         line-height: 10px; } }
