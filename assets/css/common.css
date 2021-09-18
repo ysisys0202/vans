@@ -153,6 +153,14 @@ i {
   .btn-primary:hover {
     opacity: 0.8; }
 
+.btn-blue-secondary {
+  background-color: #5e76b1;
+  border: 1px solid #5e76b1;
+  color: #fff;
+  transition: opacity 200ms ease-in-out; }
+  .btn-blue-secondary:hover {
+    opacity: 0.8; }
+
 .btn-black {
   background-color: #000;
   border: 1px solid #000;
@@ -160,6 +168,14 @@ i {
   transition: opacity 200ms ease-in-out; }
   .btn-black:hover {
     opacity: 0.8; }
+
+.btn-sm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 40px;
+  font-size: 16px; }
 
 .btn-md {
   display: flex;
@@ -336,6 +352,7 @@ i {
       color: #fff;
       transition: width 200ms ease-in-out; }
       .global-header .util-menu .search-box-btn.is-active {
+        justify-content: center;
         width: 60px; }
         .global-header .util-menu .search-box-btn.is-active span {
           display: none; }
