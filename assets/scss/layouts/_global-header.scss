@@ -70,6 +70,7 @@
       color: $color-white;
       transition: width 200ms ease-in-out;
       &.is-active {
+        justify-content: center;
         width: 60px;
         span {
           display: none;
