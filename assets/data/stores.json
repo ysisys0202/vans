@@ -1,0 +1,89 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [127.02601253986357, 37.502193538460965]
+      },
+      "type": "Feature",
+      "properties": {
+        "name": "강남점(VANS BRAND SHOWCASE)",
+        "adress": "서울특별시 강남구 강남대로 458",
+        "tel": "02-6954-229",
+        "category": ["Skate", "Kids"],
+        "storeId": "01"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [127.03812941908835, 37.5271791432144]
+      },
+      "type": "Feature",
+      "properties": {
+        "name": "압구정직영점",
+        "adress": "서울특별시 강남구 압구정로 50길 17",
+        "tel": "02-512-1578",
+        "category": ["Skat", "Vault", "Kids"],
+        "storeId": "02"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [127.05970108509062, 37.51093434533031]
+      },
+      "type": "Feature",
+      "properties": {
+        "name": "스타필드 코엑스점",
+        "adress": "서울특별시 강남구 영동대로 513 스타필드 코엑스몰 G106-1",
+        "tel": "02-6002-6056",
+        "category": ["Skat", "Kids"],
+        "storeId": "03"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [126.98534086346626, 37.56262310800003]
+      },
+      "type": "Feature",
+      "properties": {
+        "name": "명동 M Plaza점",
+        "adress": "서울특별시 중구 명동8길 27 엠플라자 1층",
+        "tel": "02-318-79037",
+        "category": ["skate", "Kids"],
+        "storeId": "04"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [127.06561267375946, 37.54127134142709]
+      },
+      "type": "Feature",
+      "properties": {
+        "name": "커먼그라운드점",
+        "adress": "서울특별시 광진구 자양동 17-1 커먼그라운드",
+        "tel": "02-2122-1201",
+        "category": ["Skate"],
+        "storeId": "05"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [127.06111729145051, 37.654980101777596]
+      },
+      "type": "Feature",
+      "properties": {
+        "name": "롯데 노원점",
+        "adress": "서울특별시 노원구 동일로 1414 롯데노원점 8층",
+        "tel": "02-950-2806",
+        "category": ["Kids"],
+        "storeId": "06"
+      }
+    }
+  ]
+}
