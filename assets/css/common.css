@@ -383,6 +383,7 @@ i {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        margin-left: -2px;
         height: 25px; }
       .global-header .util-menu {
         margin-right: 4.16667%; }
@@ -395,9 +396,11 @@ i {
             padding: 5px;
             height: 14px;
             font-size: 8px; }
+          .global-header .util-menu-item.marker {
+            padding-left: 4px; }
         .global-header .util-menu .search-box-btn {
           display: inline-block;
-          padding: 0 10px;
+          padding: 0 10px 0 0;
           width: auto;
           height: 50px;
           background-color: transparent;

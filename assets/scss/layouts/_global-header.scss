@@ -106,6 +106,7 @@
     height: 50px;
     .logo {
       @include pos-center;
+      margin-left: -2px;
       height: 25px;
     }
     .util-menu {
@@ -120,10 +121,13 @@
           height: 14px;
           font-size: 8px;
         }
+        &.marker {
+          padding-left: 4px;
+        }
       }
       .search-box-btn {
         display: inline-block;
-        padding: 0 $text-indent-sm;
+        padding: 0 $text-indent-sm 0 0;
         width: auto;
         height: 50px;
         background-color: transparent;
