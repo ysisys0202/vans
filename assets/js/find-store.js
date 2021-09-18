@@ -9,7 +9,7 @@ function initMap() {
 
   // Load the stores GeoJSON onto the map.
 
-  map.data.loadGeoJson("../data/stores.json", {
+  map.data.loadGeoJson("../assets/data/stores.json", {
     idPropertyName: "storeid",
   });
 
