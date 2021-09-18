@@ -1,0 +1,60 @@
+.sub-banner {
+  position: relative;
+  margin: 40px 8.33333% 0;
+  height: 480px;
+  overflow: hidden; }
+  .sub-banner.is-active .sub-banner-bg {
+    transform: scale(1.2); }
+  .sub-banner.is-active .sub-banner-header {
+    background-color: rgba(0, 0, 0, 0.4); }
+  .sub-banner.is-active .sub-banner-title,
+  .sub-banner.is-active .btn-wrapper {
+    transform: translateY(0);
+    opacity: 1; }
+  .sub-banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/sub1/sub-banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 600ms ease-in-out; }
+  .sub-banner-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 40px 8.33333%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 600ms ease-in-out; }
+  .sub-banner-title {
+    margin-bottom: 24px;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    text-align: right;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: opacity 600ms 200ms ease-in-out, transform 600ms 200ms ease-in-out; }
+  .sub-banner .btn-wrapper {
+    opacity: 0;
+    transform: translateY(50%);
+    transition: opacity 600ms 200ms ease-in-out, transform 600ms 200ms ease-in-out; }
+  @media screen and (max-width: 1200px) {
+    .sub-banner {
+      margin: 0; }
+      .sub-banner-title {
+        font-size: 36px; } }
+  @media screen and (max-width: 1024px) {
+    .sub-banner {
+      height: 70vh; }
+      .sub-banner-title {
+        font-size: 24px; } }
+
+/*# sourceMappingURL=sub1-find-store.css.map */

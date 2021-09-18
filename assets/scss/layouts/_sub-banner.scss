@@ -1,0 +1,71 @@
+.sub-banner {
+  position: relative;
+  margin: 40px $column-width 0;
+  height: 480px;
+  overflow: hidden;
+  &.is-active {
+    .sub-banner-bg {
+      transform: scale(1.2);
+    }
+    .sub-banner-header {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    .sub-banner-title,
+    .btn-wrapper {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/sub1/sub-banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 600ms ease-in-out;
+  }
+  &-header {
+    @include flexbox(end, end);
+    flex-direction: column;
+
+    padding: 40px $column-width;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 600ms ease-in-out;
+  }
+  &-title {
+    margin-bottom: 24px;
+    font-size: $font-size-48;
+    font-weight: 700;
+    color: $color-white;
+    line-height: 1.2;
+    text-align: right;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: opacity 600ms 200ms ease-in-out,
+      transform 600ms 200ms ease-in-out;
+  }
+  .btn-wrapper {
+    opacity: 0;
+    transform: translateY(50%);
+    transition: opacity 600ms 200ms ease-in-out,
+      transform 600ms 200ms ease-in-out;
+  }
+  @include responsive(D) {
+    margin: 0;
+    &-title {
+      font-size: $font-size-36;
+    }
+  }
+  @include responsive(T) {
+    height: 70vh;
+    &-title {
+      font-size: $font-size-24;
+    }
+  }
+}
