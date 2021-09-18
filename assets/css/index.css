@@ -233,7 +233,8 @@
       font-family: "Poppins", sans-serif;
       font-size: 96px;
       font-weight: 800;
-      line-height: 1; }
+      line-height: 1;
+      text-shadow: -1px -1px 0 #333333, 1px -1px 0 #333333, -1px 1px 0 #333333, 1px 1px 0 #333333; }
     .main .fixed-area.is-fixed {
       position: fixed;
       top: 0;
