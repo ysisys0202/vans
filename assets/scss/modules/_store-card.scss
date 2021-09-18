@@ -1,0 +1,37 @@
+.store-card {
+  padding: 20px 30px;
+  border-left: 5px solid transparent;
+  border-bottom: 1px solid $color-grey-border;
+  transition: border-left-color 100ms ease-in-out;
+  cursor: pointer;
+  &:hover {
+    border-left-color: $color-blue-primary;
+  }
+  .store-title {
+    margin-bottom: 12px;
+    font-size: $font-size-16;
+  }
+  .info-list {
+    margin-bottom: 18px;
+  }
+  .info-item {
+    dd {
+      font-size: $font-size-14;
+      line-height: 1;
+      color: $color-grey-secondary;
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 4px;
+    }
+  }
+  .tag {
+    padding: 0 4px;
+    border: 1px solid $color-red;
+    color: $color-red;
+    font-size: 10px;
+    line-height: 15px;
+  }
+  @include responsive(M) {
+    padding: 20px 10px;
+  }
+}

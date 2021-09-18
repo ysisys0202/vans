@@ -1,0 +1,113 @@
+$find-store-header-height-D: 190px;
+.find-store {
+  .content-body {
+    @include flexbox(start, stretch);
+  }
+  .store-area,
+  .store-map-area {
+    height: 600px;
+    background-color: $color-white;
+  }
+  .store-area {
+    margin: 0 $column-width;
+    width: 475px;
+  }
+  &-header {
+    height: $find-store-header-height-D;
+  }
+  &-title {
+    padding: 10px 20px;
+    font-size: $font-size-20;
+    line-height: 1;
+  }
+  &-form {
+    padding: 40px 20px;
+    border-top: 1px solid $color-grey-border;
+
+    .input-item {
+      @include flexbox(between);
+      margin-bottom: 20px;
+    }
+    .find-store-input {
+      margin-right: 20px;
+      padding-left: $text-indent-sm;
+      width: calc(100% - 50px);
+      height: 40px;
+      border: 1px solid $color-grey-border;
+    }
+    .checkbox-group {
+      @include flexbox(start);
+    }
+    .checkbox-item {
+      @include flexbox(start);
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+    }
+    .find-store-checkbox {
+      margin-right: 4px;
+      cursor: pointer;
+    }
+    .checkbox-label {
+      font-size: $font-size-14;
+      cursor: pointer;
+    }
+  }
+  .store-list {
+    height: calc(100% - #{$find-store-header-height-D});
+    overflow-y: auto;
+    border-top: 1px solid $color-grey-border;
+  }
+  .store-map-area {
+    margin-right: $column-width;
+    width: $column-width * 6;
+  }
+  .store-map {
+    height: 100%;
+    &-name {
+      margin-bottom: 4px;
+      font-size: $font-size-14;
+      font-weight: 700;
+    }
+    &-adress {
+      margin-bottom: 2px;
+    }
+  }
+  @include responsive(T) {
+    .content-body {
+      flex-direction: column-reverse;
+    }
+    .store-area,
+    .store-map-area {
+      padding: 0 $column-width;
+      width: 100%;
+    }
+    .store-area {
+      margin-left: 0;
+    }
+    .store-map-area {
+      margin-right: 0;
+      margin-bottom: 40px;
+      height: 400px;
+    }
+  }
+  @include responsive(M) {
+    .store-area,
+    .store-map-area {
+      padding: 0 $column-width/2;
+    }
+    &-title {
+      padding: 10px 0;
+    }
+    &-form {
+      padding: 40px 0;
+    }
+    .store-map-area {
+      height: 40vh;
+      .gmnoprint,
+      .gm-fullscreen-control {
+        display: none;
+      }
+    }
+  }
+}

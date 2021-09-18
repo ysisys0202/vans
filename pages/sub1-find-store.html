@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/common.css" />
     <link rel="stylesheet" href="../assets/css/sub1-find-store.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   </head>
   <body>
     <header class="global-header">
@@ -203,6 +204,206 @@
       <div class="sub-banner-bg" aria-hidden="true"></div>
     </section>
     <!-- sub-banner -->
+    <section class="content find-store">
+      <div class="content-body">
+        <div class="store-area">
+          <header class="find-store-header">
+            <h2 class="find-store-title">매장찾기</h2>
+            <div class="find-store-form">
+              <div class="input-item">
+                <input
+                  type="text"
+                  class="find-store-input"
+                  placeholder="매장 또는 주소명을 입력해주세요"
+                />
+                <button
+                  type="button"
+                  class="btn-sm btn-blue-secondary form-btn"
+                >
+                  검색
+                </button>
+              </div>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    class="find-store-checkbox"
+                    name="store"
+                    id="store-all"
+                  />
+                  <label class="checkbox-label" for="store-all">전체</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    class="find-store-checkbox"
+                    name="store"
+                    id="store-on-load"
+                  />
+                  <label class="checkbox-label" for="store-on-load"
+                    >단독매장</label
+                  >
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    class="find-store-checkbox"
+                    name="store"
+                    id="store-in-mall"
+                  />
+                  <label class="checkbox-label" for="store-in-mall"
+                    >백화점/쇼핑몰</label
+                  >
+                </div>
+              </div>
+            </div>
+          </header>
+          <ul class="store-list">
+            <li class="store-item">
+              <article class="store-card">
+                <h3 class="store-title">강남점(VANS BRAND SHOWCASE)</h3>
+                <dl class="info-list">
+                  <div class="info-item">
+                    <dt class="visually-hidden">주소</dt>
+                    <dd>서울특별시 강남구 강남대로 458</dd>
+                  </div>
+                  <div class="info-item">
+                    <dt class="visually-hidden">전화번호</dt>
+                    <dd>02-6954-2299</dd>
+                  </div>
+                </dl>
+                <div class="tag-group">
+                  <span class="tag">Skate</span>
+                  <span class="tag">Kids</span>
+                </div>
+              </article>
+            </li>
+            <li class="store-item">
+              <article class="store-card">
+                <h3 class="store-title">압구정직영점</h3>
+                <dl class="info-list">
+                  <div class="info-item">
+                    <dt class="visually-hidden">주소</dt>
+                    <dd>서울특별시 강남구 압구정로 50길 17</dd>
+                  </div>
+                  <div class="info-item">
+                    <dt class="visually-hidden">전화번호</dt>
+                    <dd>02-512-1578</dd>
+                  </div>
+                </dl>
+                <div class="tag-group">
+                  <span class="tag">Skate</span>
+                  <span class="tag">Vault</span>
+                  <span class="tag">Kids</span>
+                </div>
+              </article>
+            </li>
+            <li class="store-item">
+              <article class="store-card">
+                <h3 class="store-title">스타필드 코엑스점</h3>
+                <dl class="info-list">
+                  <div class="info-item">
+                    <dt class="visually-hidden">주소</dt>
+                    <dd>
+                      서울특별시 강남구 영동대로 513 스타필드 코엑스몰 G106-1
+                    </dd>
+                  </div>
+                  <div class="info-item">
+                    <dt class="visually-hidden">전화번호</dt>
+                    <dd>02-6002-6056</dd>
+                  </div>
+                </dl>
+                <div class="tag-group">
+                  <span class="tag">Skate</span>
+                  <span class="tag">Kids</span>
+                </div>
+              </article>
+            </li>
+            <li class="store-item">
+              <article class="store-card">
+                <h3 class="store-title">롯데강남점</h3>
+                <dl class="info-list">
+                  <div class="info-item">
+                    <dt class="visually-hidden">주소</dt>
+                    <dd>
+                      서울특별시 강남구 대치동 937-2 롯데강남백화점 신관 2층
+                    </dd>
+                  </div>
+                  <div class="info-item">
+                    <dt class="visually-hidden">전화번호</dt>
+                    <dd>02-531-2257</dd>
+                  </div>
+                </dl>
+                <div class="tag-group">
+                  <span class="tag">Kids</span>
+                </div>
+              </article>
+            </li>
+            <li class="store-item">
+              <article class="store-card">
+                <h3 class="store-title">명동 M Plaza점</h3>
+                <dl class="info-list">
+                  <div class="info-item">
+                    <dt class="visually-hidden">주소</dt>
+                    <dd>서울특별시 중구 명동8길 27 엠플라자 1층</dd>
+                  </div>
+                  <div class="info-item">
+                    <dt class="visually-hidden">전화번호</dt>
+                    <dd>02-318-7903</dd>
+                  </div>
+                </dl>
+                <div class="tag-group">
+                  <span class="tag">Skate</span>
+                  <span class="tag">Kids</span>
+                </div>
+              </article>
+            </li>
+            <li class="store-item">
+              <article class="store-card">
+                <h3 class="store-title">커먼그라운드점</h3>
+                <dl class="info-list">
+                  <div class="info-item">
+                    <dt class="visually-hidden">주소</dt>
+                    <dd>서울특별시 광진구 자양동 17-1 커먼그라운드</dd>
+                  </div>
+                  <div class="info-item">
+                    <dt class="visually-hidden">전화번호</dt>
+                    <dd>02-2122-1201</dd>
+                  </div>
+                </dl>
+                <div class="tag-group">
+                  <span class="tag">Skate</span>
+                </div>
+              </article>
+            </li>
+            <li class="store-item">
+              <article class="store-card">
+                <h3 class="store-title">롯데 노원점</h3>
+                <dl class="info-list">
+                  <div class="info-item">
+                    <dt class="visually-hidden">주소</dt>
+                    <dd>서울특별시 노원구 동일로 1414 롯데노원점 8층</dd>
+                  </div>
+                  <div class="info-item">
+                    <dt class="visually-hidden">전화번호</dt>
+                    <dd>02-950-2806</dd>
+                  </div>
+                </dl>
+                <div class="tag-group">
+                  <span class="tag">Kids</span>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+        <!-- /.store-area -->
+        <div class="store-map-area">
+          <div class="store-map" id="map"></div>
+        </div>
+        <!-- store-map-area -->
+      </div>
+    </section>
+    <!-- /.contnet find-store -->
     <footer class="global-footer">
       <div class="footer-shortcut">
         <article class="shortcut-box sm-hidden">
@@ -466,5 +667,10 @@
     <div class="overlay" aria-hidden="true"></div>
     <script type="module" src="../assets/js/common.js"></script>
     <script type="module" src="../assets/js/banner.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHYhOqeMPDFmHpu80am-eHDwCrLErjXW4&callback=initMap&v=weekly"
+      async
+    ></script>
+    <script src="../assets/js/find-store.js"></script>
   </body>
 </html>

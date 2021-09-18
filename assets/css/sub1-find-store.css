@@ -1,3 +1,32 @@
+.store-card {
+  padding: 20px 30px;
+  border-left: 5px solid transparent;
+  border-bottom: 1px solid #e5e5e5;
+  transition: border-left-color 100ms ease-in-out;
+  cursor: pointer; }
+  .store-card:hover {
+    border-left-color: #1642af; }
+  .store-card .store-title {
+    margin-bottom: 12px;
+    font-size: 16px; }
+  .store-card .info-list {
+    margin-bottom: 18px; }
+  .store-card .info-item dd {
+    font-size: 14px;
+    line-height: 1;
+    color: #727272; }
+  .store-card .info-item:not(:last-of-type) {
+    margin-bottom: 4px; }
+  .store-card .tag {
+    padding: 0 4px;
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    font-size: 10px;
+    line-height: 15px; }
+  @media screen and (max-width: 768px) {
+    .store-card {
+      padding: 20px 10px; } }
+
 .sub-banner {
   position: relative;
   margin: 40px 8.33333% 0;
@@ -56,5 +85,104 @@
       height: 70vh; }
       .sub-banner-title {
         font-size: 24px; } }
+
+.find-store .content-body {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start; }
+
+.find-store .store-area,
+.find-store .store-map-area {
+  height: 600px;
+  background-color: #fff; }
+
+.find-store .store-area {
+  margin: 0 8.33333%;
+  width: 475px; }
+
+.find-store-header {
+  height: 190px; }
+
+.find-store-title {
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 1; }
+
+.find-store-form {
+  padding: 40px 20px;
+  border-top: 1px solid #e5e5e5; }
+  .find-store-form .input-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px; }
+  .find-store-form .find-store-input {
+    margin-right: 20px;
+    padding-left: 10px;
+    width: calc(100% - 50px);
+    height: 40px;
+    border: 1px solid #e5e5e5; }
+  .find-store-form .checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+  .find-store-form .checkbox-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+    .find-store-form .checkbox-item:not(:last-of-type) {
+      margin-right: 10px; }
+  .find-store-form .find-store-checkbox {
+    margin-right: 4px;
+    cursor: pointer; }
+  .find-store-form .checkbox-label {
+    font-size: 14px;
+    cursor: pointer; }
+
+.find-store .store-list {
+  height: calc(100% - 190px);
+  overflow-y: auto;
+  border-top: 1px solid #e5e5e5; }
+
+.find-store .store-map-area {
+  margin-right: 8.33333%;
+  width: 50%; }
+
+.find-store .store-map {
+  height: 100%; }
+  .find-store .store-map-name {
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 700; }
+  .find-store .store-map-adress {
+    margin-bottom: 2px; }
+
+@media screen and (max-width: 1024px) {
+  .find-store .content-body {
+    flex-direction: column-reverse; }
+  .find-store .store-area,
+  .find-store .store-map-area {
+    padding: 0 8.33333%;
+    width: 100%; }
+  .find-store .store-area {
+    margin-left: 0; }
+  .find-store .store-map-area {
+    margin-right: 0;
+    margin-bottom: 40px;
+    height: 400px; } }
+
+@media screen and (max-width: 768px) {
+  .find-store .store-area,
+  .find-store .store-map-area {
+    padding: 0 4.16667%; }
+  .find-store-title {
+    padding: 10px 0; }
+  .find-store-form {
+    padding: 40px 0; }
+  .find-store .store-map-area {
+    height: 40vh; }
+    .find-store .store-map-area .gmnoprint,
+    .find-store .store-map-area .gm-fullscreen-control {
+      display: none; } }
 
 /*# sourceMappingURL=sub1-find-store.css.map */
