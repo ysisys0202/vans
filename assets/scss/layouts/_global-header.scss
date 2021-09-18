@@ -42,9 +42,19 @@
       position: relative;
       transition: opacity 100ms ease-in-out;
       margin-right: 20px;
-
       &:hover {
         opacity: 0.6;
+      }
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.4;
+        }
+      }
+      &.marker {
+        animation: blink 800ms infinite linear alternate;
       }
       .badge {
         @include flexbox;

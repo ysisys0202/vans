@@ -326,6 +326,14 @@ i {
       margin-right: 20px; }
       .global-header .util-menu-item:hover {
         opacity: 0.6; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0.4; } }
+      .global-header .util-menu-item.marker {
+        animation: blink 800ms infinite linear alternate; }
       .global-header .util-menu-item .badge {
         display: flex;
         align-items: center;
