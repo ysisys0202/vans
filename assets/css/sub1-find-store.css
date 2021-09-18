@@ -156,6 +156,9 @@
     font-weight: 700; }
   .find-store .store-map-adress {
     margin-bottom: 2px; }
+  .find-store .store-map .gmnoprint,
+  .find-store .store-map .gm-fullscreen-control {
+    display: none; }
 
 @media screen and (max-width: 1024px) {
   .find-store .content-body {
@@ -180,9 +183,6 @@
   .find-store-form {
     padding: 40px 0; }
   .find-store .store-map-area {
-    height: 40vh; }
-    .find-store .store-map-area .gmnoprint,
-    .find-store .store-map-area .gm-fullscreen-control {
-      display: none; } }
+    height: 40vh; } }
 
 /*# sourceMappingURL=sub1-find-store.css.map */
