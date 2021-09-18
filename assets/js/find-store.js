@@ -8,11 +8,8 @@ function initMap() {
   });
 
   // Load the stores GeoJSON onto the map.
-<<<<<<< HEAD
+
   map.data.loadGeoJson("../data/stores.json", {
-=======
-  map.data.loadGeoJson("./data/stores.json", {
->>>>>>> 71b2cfab41dfcf3fd3f03b7b9ba83f00600ef01b
     idPropertyName: "storeid",
   });
 
