@@ -300,7 +300,8 @@
       .main .scroll-area .main-slide {
         width: 100%; }
       .main .scroll-area .style-pointer {
-        width: 70px; } }
+        /*70px/768px*100*/
+        width: 9.11458vw; } }
   @media screen and (max-width: 768px) {
     .main .fixed-area,
     .main .scroll-area {
@@ -317,7 +318,8 @@
       /*36px / 320px *100*/
       font-size: 11.25vw; }
     .main .scroll-area .style-pointer {
-      width: 40px; } }
+      /*40px/320px*100*/
+      width: 12.5vw; } }
 
 .product-slide {
   width: 100%; }
