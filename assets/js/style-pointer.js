@@ -5,6 +5,7 @@
   const pointer = document.querySelector(".style-pointer");
   const styleNames = ["slip-on", "authentic", "era", "oldskool", "sk8-hi"];
   let targetItem = null;
+  let makedPointerImg = false;
 
   function setDataIdx(elements) {
     elements.forEach((element, idx) => {
@@ -95,6 +96,7 @@
     );
     setPointerImgPath(targetIdx);
   }
+
   function styleMouseOutHander(e) {
     targetItem = e.target;
     findTargetItem("style-item");
@@ -106,6 +108,7 @@
     }
     inactivateItem(targetItem);
   }
+
   function styleMouseLeaveHander() {
     if (window.innerWidth <= 1024) {
       return;
@@ -121,10 +124,9 @@
     }
     setPointerPos(mouseXPos, mouseYPos);
   }
-  let makedPointerImg = false;
+
   function scrollHandler() {
     const scrollYPos = window.pageYOffset;
-    const styleListRect = styleList.getBoundingClientRect();
 
     styleItems.forEach((styleItem, idx) => {
       const styleItemRect = styleItem.getBoundingClientRect();
@@ -157,13 +159,16 @@
           if (!makedPointerImg) {
             return;
           }
+
           removePointerImg();
           makedPointerImg = false;
         }
+
         if (idx === styleItems.length - 1 && scrollYPos > endPos) {
           if (!makedPointerImg) {
             return;
           }
+
           removePointerImg();
           makedPointerImg = false;
         }
