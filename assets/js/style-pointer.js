@@ -121,7 +121,7 @@
     }
     setPointerPos(mouseXPos, mouseYPos);
   }
-
+  let makedPointerImg = false;
   function scrollHandler() {
     const scrollYPos = window.pageYOffset;
     const styleListRect = styleList.getBoundingClientRect();
@@ -132,10 +132,18 @@
       const endPos = startPos + styleItemRect.height + 10;
       if (scrollYPos > startPos && scrollYPos < endPos) {
         if (idx === 0 && scrollYPos > startPos) {
+          if (makedPointerImg) {
+            return;
+          }
           makePointerImg();
+          makedPointerImg = true;
         }
         if (idx === styleItems.length - 1 && scrollYPos < endPos) {
+          if (makedPointerImg) {
+            return;
+          }
           makePointerImg();
+          makedPointerImg = true;
         }
         activateItem(styleItem);
         setPointerImgPath(idx);
@@ -146,10 +154,18 @@
       } else {
         inactivateItem(styleItem);
         if (idx === 0 && scrollYPos < startPos) {
+          if (!makedPointerImg) {
+            return;
+          }
           removePointerImg();
+          makedPointerImg = false;
         }
         if (idx === styleItems.length - 1 && scrollYPos > endPos) {
+          if (!makedPointerImg) {
+            return;
+          }
           removePointerImg();
+          makedPointerImg = false;
         }
       }
     });
