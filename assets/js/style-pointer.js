@@ -133,6 +133,12 @@
       const startPos = styleItemRect.top + scrollYPos - window.innerHeight / 2;
       const endPos = startPos + styleItemRect.height + 10;
       if (scrollYPos > startPos && scrollYPos < endPos) {
+        activateItem(styleItem);
+        setPointerImgPath(idx);
+        setPointerPos(
+          styleItemRect.right + 20,
+          styleItemRect.bottom - pointer.getBoundingClientRect().height,
+        );
         if (idx === 0 && scrollYPos > startPos) {
           if (makedPointerImg) {
             return;
@@ -147,19 +153,12 @@
           makePointerImg();
           makedPointerImg = true;
         }
-        activateItem(styleItem);
-        setPointerImgPath(idx);
-        setPointerPos(
-          styleItemRect.right + 20,
-          styleItemRect.bottom - pointer.getBoundingClientRect().height,
-        );
       } else {
         inactivateItem(styleItem);
         if (idx === 0 && scrollYPos < startPos) {
           if (!makedPointerImg) {
             return;
           }
-
           removePointerImg();
           makedPointerImg = false;
         }
@@ -168,7 +167,6 @@
           if (!makedPointerImg) {
             return;
           }
-
           removePointerImg();
           makedPointerImg = false;
         }
