@@ -5,7 +5,7 @@ const mainSlide = tns({
   items: 1,
   mode: "gallery",
   autoplay: true,
-  autoplayTimeout: 5000,
+  autoplayTimeout: 4000,
   controls: false,
   nav: false,
   autoplayButtonOutput: false,
